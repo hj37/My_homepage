@@ -73,11 +73,12 @@
     									memberInfo += "<tr><td>" + jsonInfo.members[i].num + "</td>";
     									memberInfo += "<td>" + jsonInfo.members[i].name + "</td>";
     									memberInfo += "<td>" + jsonInfo.members[i].comment + "</td>";
-    									memberInfo += "<td>" + jsonInfo.members[i].reg + "</td></tr>";
-    		
+    									memberInfo += "<td>" + jsonInfo.members[i].reg + "</td>";
+    									memberInfo += "<td><button name = 'button' type='button'>삭제</button></td></tr>";
+
     								}
     								    								
-    								$("#tc").append(memberInfo + "<br>");
+    								$("#tr").append(memberInfo + "<br>");
     								
     								
     							},
@@ -237,7 +238,7 @@ list = rvdao.getrvboard("board", num);
 
 
 <div class="container">
-	<div class="row">
+	<div class="row" style="margin-bottom: -16px;">
 	<table class="table table-hover" id="tc" style="text-align:center; border: 1px solid white;" bgcolor = "white">
 	
 	<thead>
@@ -272,10 +273,16 @@ list = rvdao.getrvboard("board", num);
 	</div>
 </div>
 
-
-
-
-
+<div class="container">
+	<div class="row">
+	<table class="table table-hover"  style="text-align:center; border: 1px solid white;" bgcolor = "white">
+	<tbody id = "tr">
+	
+	
+	</tbody>
+	</table>
+	</div>
+</div>
 
 <div class="container">
 	<div class="row">
