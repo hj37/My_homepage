@@ -60,6 +60,16 @@
 </style>
 
 <%
+	if(session.getAttribute("id") == null){
+%>
+	<script type="text/javascript">
+		alert("로그인을 해주세요");
+		location.href= "login.jsp";
+	</script>
+<% 
+	}
+
+
 	//게시판 목록 검색해오기 
 	BoardDAO boardDAO = new BoardDAO();
 
